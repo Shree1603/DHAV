@@ -18,21 +18,3 @@ ggplot(data_long, aes(x = Age, y = value, fill = variable)) +
   geom_bar(stat = "identity") +
   labs(title = "Stacked Bar Chart", x = "Age", y = "Percentage") +
   theme_minimal()
-
-# Line Plot
-ggplot(data_long, aes(x = Age, y = value, color = variable, group = variable)) +
-  geom_line() +
-  labs(title = "Line Plot", x = "Age", y = "Percentage") +
-  theme_minimal()
-
-# Scatter Plot
-ggplot(data_long, aes(x = Age, y = value, color = variable)) +
-  geom_point() +
-  labs(title = "Scatter Plot", x = "Age", y = "Percentage") +
-  theme_minimal()
-
-# Histogram
-ggplot(data_long, aes(x = value)) +
-  geom_histogram(binwidth = 5, fill = "blue", color = "black", alpha = 0.7) +
-  labs(title = "Histogram", x = "Percentage", y = "Frequency") +
-  theme_minimal()
